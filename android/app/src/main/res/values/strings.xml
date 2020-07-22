@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ESRGAN</string>
+    <string name="about">Use ESRGAN to enhance an image</string>
+</resources>
