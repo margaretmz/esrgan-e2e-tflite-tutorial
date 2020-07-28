@@ -4,6 +4,7 @@ import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import com.mzm.sample.esrgan.ml.CompressedEsrgan
 import com.mzm.sample.esrgan.ml.Esrgan
 import org.tensorflow.lite.support.image.TensorImage
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         imageViewOriginal.setImageBitmap(downsampled)
 
         val model = Esrgan.newInstance(this)
+//        val model = CompressedEsrgan.newInstance(this)
 
 // Creates inputs for reference.
         val originalImage = TensorImage.fromBitmap(downsampled)
