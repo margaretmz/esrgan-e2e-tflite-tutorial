@@ -1,0 +1,77 @@
+{
+  "name": "ESRGAN",
+  "description": "Enhanced super-res GAN for improving image quality. Converted by TFLiteConverter from TF 2.2.0",
+  "version": "v-2020-07-30",
+  "subgraph_metadata": [
+    {
+      "input_tensor_metadata": [
+        {
+          "name": "original_image",
+          "description": "The expected image is 128 x 128, with three channels (red, blue, and green) per pixel. Each value in the tensor is between 0.0 and 255.0.",
+          "content": {
+            "content_properties_type": "ImageProperties",
+            "content_properties": {
+              "color_space": "RGB"
+            }
+          },
+          "process_units": [
+            {
+              "options_type": "NormalizationOptions",
+              "options": {
+                "mean": [
+                  0.0
+                ],
+                "std": [
+                  1.0
+                ]
+              }
+            }
+          ],
+          "stats": {
+            "max": [
+              255.0
+            ],
+            "min": [
+              0.0
+            ]
+          }
+        }
+      ],
+      "output_tensor_metadata": [
+        {
+          "name": "enhanced_image",
+          "description": "Image enhanced.",
+          "content": {
+            "content_properties_type": "ImageProperties",
+            "content_properties": {
+              "color_space": "RGB"
+            }
+          },
+          "process_units": [
+            {
+              "options_type": "NormalizationOptions",
+              "options": {
+                "mean": [
+                  0.0
+                ],
+                "std": [
+                  1.0
+                ]
+              }
+            }
+          ],
+          "stats": {
+            "max": [
+              255.0
+            ],
+            "min": [
+              0.0
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "author": "TensorFlow",
+  "license": "Apache License. Version 2.0 http://www.apache.org/licenses/LICENSE-2.0."
+}
